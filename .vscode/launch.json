@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Main Process",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+      "env": {"NODE_ENV":"development",  "ELECTRON_WEBPACK_WDS_PORT":"1212"},
+      "windows": {
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+      },
+      "program": "${workspaceRoot}/dist/main/main.js",
+      "protocol": "inspector",
+      "args" : ["." ],
+    }
+  ]
+}
